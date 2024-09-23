@@ -20,6 +20,16 @@ function sortear(){
     let numeros = [];
     let numero;
 
+    if (numeroMin >= numeroMax) {
+      alert('Campo "Do número" deve ser inferior ao campo "Até o número". Verifique!');
+      return;
+    }
+
+    if (quantidadeNumeros > (numeroMax - numeroMin + 1)) {
+      alert('Campo "Quantidade" deve ser menor ou igual ao intervalo informado no campo "Do número" até o campo "Até o número". Verifique!');
+      return;
+    }
+
     for (let i = 0; i < quantidadeNumeros;i++){
 
         numero = geraNumeroAleatorio(numeroMin,numeroMax);
